@@ -289,28 +289,28 @@ body {
   position: relative;
   display: inline-block;
   font-size: 90%;
-  font-weight: 700;
+  font-weight: 400;
   color: #000;
   text-decoration: none;
   text-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
   padding: .5em 1em;
   outline: none;
   border-radius: 3px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#6e7078), to(#515156)) #6e7078;
-  background: linear-gradient(#6e7078, #515156) #6e7078;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2e7d32), to(#43a047)) #2e7d32;
+  background: linear-gradient(#2e7d32, #43a047) #2e7d32;
   -webkit-box-shadow: 0 1px rgba(255, 255, 255, 0.2) inset, 0 3px 5px rgba(0, 1, 6, 0.5), 0 0 1px 1px rgba(0, 1, 6, 0.2);
           box-shadow: 0 1px rgba(255, 255, 255, 0.2) inset, 0 3px 5px rgba(0, 1, 6, 0.5), 0 0 1px 1px rgba(0, 1, 6, 0.2);
 }
 
 .crosses__button a:hover:not(:active) {
-  background: -webkit-gradient(linear, left top, left bottom, from(#7e7e86), to(#46474c)) #7e7e86;
-  background: linear-gradient(#7e7e86, #46474c) #7e7e86;
+  background: -webkit-gradient(linear, left top, left bottom, from(#43a047), to(#2e7d32)) #43a047;
+  background: linear-gradient(#43a047, #2e7d32) #43a047;
 }
 
 .crosses__button a:active {
   top: 1px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#4c4d52), to(#38393e)) #4c4d52;
-  background: linear-gradient(#4c4d52, #38393e) #4c4d52;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1b5e20), to(#2e7d32)) #1b5e20;
+  background: linear-gradient(#1b5e20, #2e7d32) #1b5e20;
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5) inset, 0 2px 3px rgba(0, 0, 0, 0.5) inset, 0 1px 1px rgba(255, 255, 255, 0.1);
           box-shadow: 0 0 1px rgba(0, 0, 0, 0.5) inset, 0 2px 3px rgba(0, 0, 0, 0.5) inset, 0 1px 1px rgba(255, 255, 255, 0.1);
 }

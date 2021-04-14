@@ -40,7 +40,10 @@ const showWinCombo = idx => {
 }
 
 function gameOver() {
-    getAllNodesByClass("crosses__place").forEach(node => node.removeEventListener('click', contextCatcherForHandler))
+    getAllNodesByClass("crosses__place").forEach(node => {
+        node.removeEventListener('click', contextCatcherForHandler);
+        node.style.cursor = 'default';
+})
     getNodeByClass('crosses__button').style.visibility = 'visible';
 }
 
