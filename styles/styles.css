@@ -245,11 +245,6 @@ body {
   background: #E0E0E0;
 }
 
-.container {
-  width: 100vw;
-  height: 100vh;
-}
-
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -272,6 +267,11 @@ body {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.crosses {
+  width: 100vw;
+  height: 100vh;
 }
 
 .crosses__button {
@@ -322,6 +322,7 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  padding-bottom: 50px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
