@@ -1,0 +1,123 @@
+@import 'normalize.scss';
+
+:root {
+  box-sizing: border-box;
+}
+
+body {
+  background: #E0E0E0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.centerizy {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.crosses {
+
+  &__button a{
+    margin-bottom: 40px;
+
+    position: relative;
+    display: inline-block;
+    font-size: 90%;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    text-shadow: 0 -1px 2px rgba(0,0,0,.2);
+    padding: .5em 1em;
+    outline: none;
+    border-radius: 3px;
+    background: linear-gradient(rgb(110,112,120), rgb(81,81,86)) rgb(110,112,120);
+    box-shadow:
+    0 1px rgba(255,255,255,.2) inset,
+    0 3px 5px rgba(0,1,6,.5),
+    0 0 1px 1px rgba(0,1,6,.2);
+
+    &:hover:not(:active) {
+      background: linear-gradient(rgb(126,126,134), rgb(70,71,76)) rgb(126,126,134);
+    }
+
+    &:active {
+      top: 1px;
+      background: linear-gradient(rgb(76,77,82), rgb(56,57,62)) rgb(76,77,82);
+      box-shadow:
+      0 0 1px rgba(0,0,0,.5) inset,
+      0 2px 3px rgba(0,0,0,.5) inset,
+      0 1px 1px rgba(255,255,255,.1);
+    }
+  }
+
+  &__container {
+    width: 320px;
+    height: 320px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat( 3, 1fr);
+
+    cursor: pointer;
+
+
+    & div:nth-child(-n+3) {
+      border-top: none;
+    }
+
+    & div:nth-child(3n) {
+      border-right: none;
+    }
+
+    & div:nth-child(3n+1) {
+      border-left: none;
+    }
+
+    & div:nth-child(n+7) {
+      border-bottom: none;
+    }
+  }
+
+  &__place {
+    position: relative;
+    border:5px solid #000;
+  }
+
+    &__cross {
+      font-weight: 800;
+  }
+}
+
+.cross {
+  color: #00E676;
+}
+
+.circle {
+  color: #F50057;
+}
+
+.hide {
+  opacity: .3;
+  transition: opacity 500ms linear;
+}
+
+.win-combo {
+  background-color: #FDD835;
+  transition: background-color 1000ms linear;
+
+  & .hide {
+    opacity: 1;
+  }
+}
