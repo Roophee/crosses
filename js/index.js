@@ -51,11 +51,17 @@ const crossOrCircle = () => {
     return 'circle';
 }
 
-const analyzeTheGameState= () => {
+const analyzeTheGameState = () => {
     if (checkWinCombo() >= 0) {
         showWinCombo(checkWinCombo())
         gameOver();
         console.log("GAME IS  OVER")
+        return
+    }
+    if (choiceCounter == 10) {
+        gameOver();
+        console.log("GAME IS  OVER")
+        return
     }
 }
 
