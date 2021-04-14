@@ -123,20 +123,21 @@ const addCellEventListener = node => {
 }
 
 const calculateContainerSize = (item) => {
-    let size;
-    const bodyElem = getNodeByClass('body')
+    let size = 70;
+    let metrixType;
+    const bodyElem = getNodeByClass('body');
 
     if (bodyElem.offsetWidth >= bodyElem.offsetHeight) {
-        size = Math.floor(bodyElem.offsetHeight*0.7);
+        metrixType = 'vh';
     } else {
-        size = Math.floor(bodyElem.offsetWidth*0.7);
+        metrixType = 'vw';
     }
 
-    item.style.width = size + 'px';
-    item.style.height = size + 'px';
-    getAllNodesByClass('crosses__cross').forEach(node => { node.style.fontSize = (size / 4) + 'px' })
-    getNodeByClass('crosses__button').style.fontSize = (size / 25) + 'px';
-    getNodeByClass('crosess__title').style.fontSize = (size / 12) + 'px';
+    item.style.width = size + metrixType;
+    item.style.height = size + metrixType;
+    getAllNodesByClass('crosses__cross').forEach(node => { node.style.fontSize = (size/4) + metrixType })
+    getNodeByClass('crosses__button').style.fontSize = Math.floor(size / 20) + metrixType;
+    getNodeByClass('crosess__title').style.fontSize = Math.floor(size / 12) + metrixType;
 
 }
 

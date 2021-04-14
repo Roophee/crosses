@@ -355,6 +355,7 @@ body {
 
 .crosses__cross {
   font-weight: 800;
+  line-height: 1;
 }
 
 .cross {
