@@ -281,8 +281,8 @@ body {
       -ms-user-select: none;
           user-select: none;
   visibility: hidden;
-  -webkit-transition: visibility .2s ease-out .2s;
-  transition: visibility .2s ease-out .2s;
+  -webkit-transition: visibility .25s ease-out .25s;
+  transition: visibility .25s ease-out .25s;
 }
 
 .crosses__button a {
