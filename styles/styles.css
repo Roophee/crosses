@@ -274,8 +274,18 @@ body {
           transform: translate(-50%, -50%);
 }
 
-.crosses__button a {
+.crosses__button {
   margin-bottom: 40px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  visibility: hidden;
+  -webkit-transition: visibility .2s ease-out .2s;
+  transition: visibility .2s ease-out .2s;
+}
+
+.crosses__button a {
   position: relative;
   display: inline-block;
   font-size: 90%;
@@ -308,13 +318,16 @@ body {
 .crosses__container {
   width: 320px;
   height: 320px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: (1fr)[3];
       grid-template-rows: repeat(3, 1fr);
-  cursor: pointer;
 }
 
 .crosses__container div:nth-child(-n+3) {
@@ -336,6 +349,7 @@ body {
 .crosses__place {
   position: relative;
   border: 5px solid #000;
+  cursor: pointer;
 }
 
 .crosses__cross {
@@ -344,10 +358,12 @@ body {
 
 .cross {
   color: #00E676;
+  cursor: default;
 }
 
 .circle {
   color: #F50057;
+  cursor: default;
 }
 
 .hide {

@@ -41,6 +41,7 @@ const showWinCombo = idx => {
 
 function gameOver() {
     getAllNodesByClass("crosses__place").forEach(node => node.removeEventListener('click', contextCatcherForHandler))
+    getNodeByClass('crosses__button').style.visibility = 'visible';
 }
 
 const crossOrCircle = () => {
@@ -80,6 +81,8 @@ const removeClass = (node, className) => {
 const buttonHandler = event => {
     choiceCounter = 1;
 
+    getNodeByClass('crosses__button').style.visibility = 'hidden';
+
     getAllNodesByClass("crosses__cross").forEach(node => {
         node.innerHTML = '';
         removeClass(node, 'hide');
@@ -118,15 +121,15 @@ const calculateContainerSize = (item) => {
     const bodyElem = getNodeByClass('body')
 
     if (bodyElem.offsetWidth >= bodyElem.offsetHeight) {
-        size = Math.floor(bodyElem.offsetHeight*0.8);
+        size = Math.floor(bodyElem.offsetHeight*0.7);
     } else {
-        size = Math.floor(bodyElem.offsetWidth*0.8);
+        size = Math.floor(bodyElem.offsetWidth*0.7);
     }
 
     item.style.width = size + 'px';
     item.style.height = size + 'px';
     getAllNodesByClass('crosses__cross').forEach(node => { node.style.fontSize = (size / 4) + 'px' })
-    getNodeByClass('crosses__button').style.fontSize = (size / 20) + 'px';
+    getNodeByClass('crosses__button').style.fontSize = (size / 25) + 'px';
 }
 
 calculateContainerSize(getNodeByClass('crosses__container'));
