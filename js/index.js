@@ -130,6 +130,8 @@ const calculateContainerSize = (item) => {
     item.style.height = size + 'px';
     getAllNodesByClass('crosses__cross').forEach(node => { node.style.fontSize = (size / 4) + 'px' })
     getNodeByClass('crosses__button').style.fontSize = (size / 25) + 'px';
+    getNodeByClass('crosess__title').style.fontSize = (size / 12) + 'px';
+
 }
 
 calculateContainerSize(getNodeByClass('crosses__container'));
